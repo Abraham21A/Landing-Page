@@ -115,14 +115,14 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-  flex-wrap: nowrap;
+  	flex-wrap: nowrap;
 }
 
 #header .nav-list ul {
   list-style: none;
   display: flex;
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -136,32 +136,14 @@ p {
   font-size: 12px;
 }
 
+#header .nav-list a i{
+	font-size: 20px;
+  display: none;
+}
+  
 #header .nav-list a:hover {
   color: rgb(44, 132, 12);
 }
-
-#header .nav-list-icon ul {
-  list-style: none;
-  display: flex;
-	justify-content: center;
-	align-items: center;
-  display: none;
-}
-
-#header .nav-list-icon li {
-  padding: 2px 10px;
-}
-
-#header .nav-list-icon a {
-  color: #000;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-#header .nav-list-icon a:hover {
-  color: rgb(44, 132, 12);
-}
-
 
 #home {
 	background-image: linear-gradient(
@@ -212,6 +194,7 @@ p {
 	max-width: 100%;
 	position: relative;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .newslatter form input:first-child{
@@ -388,9 +371,9 @@ footer .social-icon {
 }
 
 footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 5px;
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,7 +384,7 @@ footer .social-item a {
 }
 
 footer .social-item a i{
-  font-size: 30px;
+  font-size: 5vw;
 }
 
 footer .social-item a .face:hover {
@@ -423,78 +406,79 @@ footer .social-item a .twit:hover {
 footer p {
 	color: rgb(84, 84, 84);
 	font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media only screen and (max-width: 425px) {
-
-  #header .nav-list {
-    display: none;
+@media only screen and (max-width: 425px){
+  #home .home {
+    padding: 0 37px;
   }
 
-  #header .nav-list-icon li {
-    display: block;
+  .newslatter form {
+    width: 251px;
+  }
+  
+  .newslatter form input:last-child {
+    padding: 10px 18px;
+  }
+
+  #header .nav-list li {
+    padding: 2px 7px;
+  }
+  
+  footer p {
+    font-size: 1.1rem;
+  }
+  
+}
+
+@media only screen and (max-width: 520px){
+
+  p {
+    padding: 10px;
   }
 
   #header .nav-bar {
-    padding: 0 52px;
+    padding: 0 18px;
   }
 
-  .enlace-info {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
+  #header .nav-list li {
+    padding: 2px 6px;
+  }
 
-  h1.title-sec {
-		font-size: 6rem;
-	}
+  #header .nav-list a i{
+    display: inline-block;
+  }
+
+  #header .nav-list .show {
+    display: none;
+  }
+
+  #blog .blog {
+    padding: 70px 0px;
+  }
+
+  .title-sec {
+    font-size: 4rem;
+  }
+
+  #add .column-left .imagen-retrato {
+    padding: 0px 90px;
+  }
 
   #home h1 {
-		font-size: 7rem;
-	}
-
-  #blog .cards-blog .blog-item {
-		flex-basis: 45%;
-		margin: 2.5%;
-	}
-
-  #add .add {
-		flex-direction: row;
-	}
-
-  #add .column-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
-
-
-  #add .column-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
- 
-  #add .column-right {
-		text-align: left;
-		padding: 30px;
-	}
-
-  #add .column-right h1 {
-		text-align: left;
-	}
-
-  footer .footer {
-    min-height: 85px;
-    flex-direction: row;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: space-evenly;
+    font-size: 6rem;
   }
 
-  
+  #home p {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+
   .enlace-info {
 		font-size: 2.5rem;
 		padding: 20px 60px;
@@ -522,13 +506,6 @@ footer p {
 		height: 400px;
 		padding-left: 60px;
 	}
-
-
-  #add .column-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
  
   #add .column-right {
 		text-align: left;
@@ -539,15 +516,10 @@ footer p {
 		text-align: left;
 	}
 
-  footer .footer {
-    min-height: 85px;
-    flex-direction: row;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: space-evenly;
+  footer .social-item a i{
+    font-size: 25px;
   }
 
-  
 }
 
 @media only screen and (min-width: 1200px) {
@@ -570,4 +542,5 @@ footer p {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
+  
 }
